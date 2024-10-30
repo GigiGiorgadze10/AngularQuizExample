@@ -1,0 +1,23 @@
+<div class="user-details" *ngIf="user">
+    <h2>{{user.Email}}</h2>
+    <div class="detail-row">
+        <span class="label">ID:</span>
+        <span class="value">{{user.Id}}</span>
+    </div>
+    <div class="detail-row">
+        <span class="label">Email:</span>
+        <span class="value">{{user.Email}}</span>
+    </div>
+    <div class="detail-row">
+        <span class="label">Registration Time:</span>
+        <span class="value">{{user.RegistrationTime}}</span>
+    </div>
+    <div class="detail-row">
+        <span class="label">Last Login:</span>
+        <span class="value">{{user.LastLogin}}</span>
+    </div>
+    <div class="detail-row">
+        <span class="label">Status:</span>
+        <span class="value" [ngStyle]="{color: statusColor(user)}">{{user.Status}}</span>
+    </div>
+</div>
